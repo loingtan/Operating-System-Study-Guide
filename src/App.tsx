@@ -110,7 +110,7 @@ function App() {
   const CurrentChapterComponent = chapterComponents[currentChapter];
 
   const SidebarContent = () => (
-    <div className="flex flex-col h-full">
+    <div className="flex h-full min-h-0 flex-col">
       <div className="p-4 border-b bg-gray-900">
         <h1 className="text-xl font-bold text-white">OS Mastery</h1>
         <p className="text-sm text-gray-400">Interactive Learning</p>
@@ -123,7 +123,7 @@ function App() {
         </div>
       </div>
       
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 min-h-0">
         <div className="p-2">
           {chapters.map((chapter) => {
             const Icon = chapter.icon;
@@ -187,7 +187,7 @@ function App() {
       <Toaster position="top-right" richColors />
       
       {/* Desktop Sidebar */}
-      <div className="hidden lg:block w-80 bg-white border-r shadow-sm fixed h-full">
+      <div className="hidden lg:block w-80 bg-white border-r shadow-sm fixed inset-y-0 left-0">
         <SidebarContent />
       </div>
 
