@@ -73,3 +73,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  pre {
+    @apply overflow-x-auto rounded-md bg-slate-900 p-3 text-xs text-gray-200 md:text-sm;
+  }
+
+  pre code {
+    @apply font-mono leading-relaxed;
+  }
+
+  code.block {
+    display: block;
+    @apply overflow-x-auto whitespace-pre rounded-md bg-slate-900 p-3 font-mono text-xs leading-relaxed text-gray-200 md:text-sm;
+  }
+}
